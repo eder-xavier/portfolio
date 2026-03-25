@@ -1,2 +1,2 @@
-# porfolio
+# portfolio
 Portfolio - Éder Xavier
