@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Éder Xavier — Software Engineer, Astrophysics Researcher & MSc Student. Portfolio showcasing projects in software architecture, distributed systems, and exoplanet detection.">
+  <meta name="keywords" content="Éder Xavier, Software Engineer, Portfolio, UFRN, Astrophysics, Python, JavaScript, Django, React">
+  <meta name="author" content="Éder Xavier">
+  <meta property="og:title" content="Éder Xavier — Software Engineer & Researcher">
+  <meta property="og:description" content="Portfolio showcasing software architecture, astrophysics research, and innovative web platforms.">
+  <meta property="og:type" content="website">
+  <title>Éder Xavier — Software Engineer & Researcher</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <!-- Favicon (rocket emoji as SVG favicon) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+</head>
+<body>
+
+  <!-- ========== LOADING SCREEN ========== -->
+  <div class="loader" id="loader">
+    <div class="loader__rocket">🚀</div>
+    <div class="loader__bar">
+      <div class="loader__progress" id="loader-progress"></div>
+    </div>
+  </div>
+
+  <!-- ========== PARTICLE CANVAS ========== -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav" id="navbar">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">éder<span>.</span>dev</a>
+
+      <div class="nav__links" id="nav-links">
+        <a href="#about" class="nav__link" data-i18n="nav.about">About</a>
+        <a href="#skills" class="nav__link" data-i18n="nav.skills">Skills</a>
+        <a href="#experience" class="nav__link" data-i18n="nav.experience">Experience</a>
+        <a href="#education" class="nav__link" data-i18n="nav.education">Education</a>
+        <a href="#awards" class="nav__link" data-i18n="nav.awards">Awards</a>
+        <a href="#projects" class="nav__link" data-i18n="nav.projects">Projects</a>
+        <a href="#contact" class="nav__link" data-i18n="nav.contact">Contact</a>
+
+        <button class="lang-toggle" id="lang-toggle" aria-label="Toggle Language">
+          <span class="lang-toggle__flag">🇧🇷</span>
+          <span class="lang-toggle__text">PT</span>
+        </button>
+      </div>
+
+      <div class="nav__hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="section section--hero" id="hero">
+    <div class="hero">
+      <div class="hero__bg">
+        <img src="media/fotofoguete.jpeg" alt="Rocket launching through space — artistic painting" loading="eager">
+        <div class="hero__overlay"></div>
+      </div>
+
+      <div class="hero__content">
+        <div class="hero__photo-wrapper">
+          <div class="hero__photo-glow"></div>
+          <img src="media/eu.jpg" alt="Éder Xavier — Profile Photo" class="hero__photo">
+        </div>
+
+        <p class="hero__greeting" style="font-size: var(--fs-body); color: var(--color-text-muted); margin-bottom: var(--space-sm); letter-spacing: 2px; text-transform: uppercase;">
+          <span data-i18n="hero.greeting">Hi, I'm</span>
+        </p>
+
+        <h1 class="hero__name">
+          <span class="text-gradient">Éder Xavier</span>
+        </h1>
+
+        <div class="hero__title-line">
+          <span id="typewriter"></span><span class="typewriter-cursor"></span>
+        </div>
+
+        <div class="hero__cta">
+          <a href="docs/eder-resume-2026.pdf" class="btn btn--primary" download data-i18n="hero.cta.resume">↓ Download Resume</a>
+          <a href="#contact" class="btn btn--outline" data-i18n="hero.cta.contact">✉ Get in Touch</a>
+        </div>
+      </div>
+
+      <div class="hero__scroll">
+        <span data-i18n="hero.scroll">Scroll Down</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section__header reveal">
+        <h2 class="section__title" data-i18n="about.title">About Me</h2>
+        <p class="section__subtitle" data-i18n="about.subtitle">A glimpse into who I am and what drives me</p>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__text">
+          <p class="reveal reveal-delay-1" data-i18n="about.p1">
+            I work in the field of Computing, focusing on Software Architecture, Distributed Systems, and Architectural Description Languages. My research centers on modeling, analysis, and execution of complex system architectures.
+          </p>
+          <p class="reveal reveal-delay-2" data-i18n="about.p2">
+            I have experience in experimental software engineering, executable architectures, and the evolution of modeling languages, including SysML, ADLs, and tools supporting architectural execution.
+          </p>
+          <p class="reveal reveal-delay-3" data-i18n="about.p3">
+            Beyond software, my background in astrophysics research and Neuroscience — gives me a unique interdisciplinary perspective that I bring to every project.
+          </p>
+        </div>
+
+        <div class="about__info reveal reveal-delay-2">
+          <div class="about__stats">
+            <div class="stat">
+              <div class="stat__number" data-count="4" data-suffix="+">0</div>
+              <div class="stat__label" data-i18n="stat.years">Years of Experience</div>
+            </div>
+            <div class="stat">
+              <div class="stat__number" data-count="10" data-suffix="+">0</div>
+              <div class="stat__label" data-i18n="stat.projects">Projects Completed</div>
+            </div>
+            <div class="stat">
+              <div class="stat__number" data-count="5" data-suffix="+">0</div>
+              <div class="stat__label" data-i18n="stat.publications">Research Areas</div>
+            </div>
+          </div>
+
+          <div style="margin-top: var(--space-2xl);">
+            <div class="reveal reveal-delay-3" style="display: flex; gap: var(--space-md); flex-wrap: wrap;">
+              <span class="badge badge--gold">🇧🇷 Português — Nativo</span>
+              <span class="badge badge--gold">🇺🇸 English — Proficient</span>
+              <span class="badge">🇫🇷 Français — Basic</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ========== SKILLS SECTION ========== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section__header reveal">
+        <h2 class="section__title" data-i18n="skills.title">Skills & Technologies</h2>
+        <p class="section__subtitle" data-i18n="skills.subtitle">Technologies and tools I work with</p>
+      </div>
+
+      <!-- Programming Languages -->
+      <div class="skills__category reveal">
+        <h3 class="skills__category-title" data-i18n="skills.languages">💻 Programming Languages</h3>
+        <div class="skills__list">
+          <span class="badge">Python</span>
+          <span class="badge">JavaScript</span>
+          <span class="badge">TypeScript</span>
+          <span class="badge">Java</span>
+          <span class="badge">PHP</span>
+          <span class="badge">Dart</span>
+          <span class="badge">C#</span>
+          <span class="badge">C++</span>
+          <span class="badge">Fortran</span>
+          <span class="badge">MATLAB</span>
+        </div>
+      </div>
+
+      <!-- Frameworks -->
+      <div class="skills__category reveal">
+        <h3 class="skills__category-title" data-i18n="skills.frameworks">🚀 Frameworks & Libraries</h3>
+        <div class="skills__list">
+          <span class="badge">Django</span>
+          <span class="badge">Node.js</span>
+          <span class="badge">React</span>
+          <span class="badge">React Native</span>
+          <span class="badge">Angular</span>
+          <span class="badge">Sklearn</span>
+          <span class="badge">TensorFlow</span>
+          <span class="badge">Tkinter</span>
+        </div>
+      </div>
+
+      <!-- DevOps -->
+      <div class="skills__category reveal">
+        <h3 class="skills__category-title" data-i18n="skills.devops">☁️ DevOps & Infrastructure</h3>
+        <div class="skills__list">
+          <span class="badge">Git / GitHub / GitLab</span>
+          <span class="badge">AWS (EC2, S3, RDS)</span>
+          <span class="badge">Nginx</span>
+          <span class="badge">Gunicorn</span>
+          <span class="badge">Linux</span>
+          <span class="badge">UmbrellOS</span>
+          <span class="badge">CasaOS</span>
+          <span class="badge">REST APIs</span>
+        </div>
+      </div>
+
+      <!-- Databases -->
+      <div class="skills__category reveal">
+        <h3 class="skills__category-title" data-i18n="skills.databases">🗄️ Databases</h3>
+        <div class="skills__list">
+          <span class="badge">PostgreSQL</span>
+          <span class="badge">MySQL</span>
+          <span class="badge">SQLite</span>
+        </div>
+      </div>
+
+      <!-- Specialized -->
+      <div class="skills__category reveal">
+        <h3 class="skills__category-title" data-i18n="skills.other">🔬 Specialized</h3>
+        <div class="skills__list">
+          <span class="badge">LLMs (LM Studio)</span>
+          <span class="badge">Quantum Computing (IBM)</span>
+          <span class="badge">IoT (Arduino, ESP32, RPi)</span>
+          <span class="badge">Blockchain (Polygon)</span>
+          <span class="badge">VHDL / Digital Systems</span>
+          <span class="badge">SysML / SysADL</span>
+          <span class="badge">Cognitive Neuroscience</span>
+          <span class="badge">Computational Neuroscience</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ========== EXPERIENCE SECTION ========== -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section__header reveal">
+        <h2 class="section__title" data-i18n="experience.title">Experience</h2>
+        <p class="section__subtitle" data-i18n="experience.subtitle">My professional journey and research contributions</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Astrophysics Research -->
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__date" data-i18n="exp1.date">2022 — 2024</div>
+          <div class="timeline__card">
+            <h3 class="timeline__card-title" data-i18n="exp1.title">Astrophysics Research Fellow</h3>
+            <p class="timeline__card-subtitle" data-i18n="exp1.org">UFRN — Federal University of Rio Grande do Norte</p>
+            <p class="timeline__card-text" data-i18n="exp1.desc">
+              Conducted research on exoplanet detection in compact binary systems. Discovered evidence of a potential exoplanet and pursued confirmation of another. Developed the TITAN astrophysics team platform (titan.ect.ufrn.br) and an automated exoplanet candidate detection tool (titan.ect.ufrn.br/extrassolar/) using Django, APIs, and specialized astrophysics libraries.
+            </p>
+            <div class="card__tags">
+              <span class="tag">Django</span>
+              <span class="tag">Python</span>
+              <span class="tag">REST API</span>
+              <span class="tag">Astrophysics</span>
+              <span class="tag">Data Analysis</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- IC Junior -->
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__date" data-i18n="exp2.date">2022 — 2023</div>
+          <div class="timeline__card">
+            <h3 class="timeline__card-title" data-i18n="exp2.title">Scientific Initiation Fellow (ICjr)</h3>
+            <p class="timeline__card-subtitle" data-i18n="exp2.org">OBA/MOBFOG — Brazilian Astronomy & Rocket Olympiad</p>
+            <p class="timeline__card-text" data-i18n="exp2.desc">
+              Focused on the scientific method applied to aerospace engineering. Carried out experimental and theoretical work in rocket construction. Also developed a multi-stage rocket speed calculator using Python with Tkinter interface.
+            </p>
+            <div class="card__tags">
+              <span class="tag">Python</span>
+              <span class="tag">Tkinter</span>
+              <span class="tag">Aerospace</span>
+              <span class="tag">Scientific Method</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ========== EDUCATION SECTION ========== -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section__header reveal">
+        <h2 class="section__title" data-i18n="education.title">Education</h2>
+        <p class="section__subtitle" data-i18n="education.subtitle">Academic path and qualifications</p>
+      </div>
+
+      <div class="timeline">
+        <!-- MSc -->
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__date" data-i18n="edu1.date">2026 — Present</div>
+          <div class="timeline__card">
+            <h3 class="timeline__card-title" data-i18n="edu1.title">Master's in Systems and Computing</h3>
+            <p class="timeline__card-subtitle" data-i18n="edu1.org">UFRN — Federal University of Rio Grande do Norte</p>
+            <p class="timeline__card-text" data-i18n="edu1.desc">
+              Research focus on Software Architecture, Distributed Systems, and Architectural Description Languages. Working on executable architecture modeling, SysADL, and architectural evolution.
+            </p>
+          </div>
+        </div>
+
+        <!-- ADS -->
+        <div class="timeline__item reveal">
+          <div class="timeline__dot"></div>
+          <div class="timeline__date" data-i18n="edu2.date">2024 — 2025</div>
+          <div class="timeline__card">
+            <h3 class="timeline__card-title" data-i18n="edu2.title">Systems Analysis and Development</h3>
+            <p class="timeline__card-subtitle" data-i18n="edu2.org">UniBf — Brazilian Union of Colleges</p>
+            <p class="timeline__card-text" data-i18n="edu2.desc">
+              Undergraduate degree covering full-stack development, software engineering, databases, and information systems. Completed with distinction.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ========== AWARDS SECTION ========== -->
+  <section class="section" id="awards">
+    <div class="container">
+      <div class="section__header reveal">
+        <h2 class="section__title" data-i18n="awards.title">Awards & Honors</h2>
+        <p class="section__subtitle" data-i18n="awards.subtitle">Recognitions and achievements</p>
+      </div>
+
+      <div class="awards__grid">
+        <div class="award-card reveal reveal-delay-1">
+          <div class="award-card__icon">🏆</div>
+          <h3 class="award-card__title" data-i18n="award1.title">2nd Place — Scientific Highlight</h3>
+          <span class="award-card__year">2022</span>
+          <p class="award-card__org" data-i18n="award1.org">UFRN IC & Technology</p>
+        </div>
+
+        <div class="award-card reveal reveal-delay-2">
+          <div class="award-card__icon">🥇</div>
+          <h3 class="award-card__title" data-i18n="award2.title">Gold Medal</h3>
+          <span class="award-card__year">2022</span>
+          <p class="award-card__org" data-i18n="award2.org">MOBFOG — Brazilian Rocket Olympiad</p>
+        </div>
+
+        <div class="award-card reveal reveal-delay-3">
+          <div class="award-card__icon">🏅</div>
+          <h3 class="award-card__title" data-i18n="award3.title">Honor Award</h3>
+          <span class="award-card__year">2021</span>
+          <p class="award-card__org" data-i18n="award3.org">ONC — National Science Olympiad</p>
+        </div>
+
+        <div class="award-card reveal reveal-delay-4">
+          <div class="award-card__icon">📜</div>
+          <h3 class="award-card__title" data-i18n="award4.title">Honorable Mention</h3>
+          <span class="award-card__year">2021</span>
+          <p class="award-card__org" data-i18n="award4.org">ONHB — National History Olympiad</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ========== PROJECTS SECTION ========== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section__header reveal">
+        <h2 class="section__title" data-i18n="projects.title">Featured Projects</h2>
+        <p class="section__subtitle" data-i18n="projects.subtitle">Some of my notable work</p>
+      </div>
+
+      <div class="projects__grid">
+        <!-- TITAN Platform -->
+        <div class="card reveal reveal-delay-1">
+          <div class="card__icon">🔭</div>
+          <h3 class="card__title" data-i18n="proj1.title">TITAN Platform</h3>
+          <p class="card__description" data-i18n="proj1.desc">
+            Web platform for the UFRN astrophysics team. Serves as a hub for research data, team collaboration, and publication of findings in exoplanet detection.
+          </p>
+          <div class="card__tags">
+            <span class="tag">Django</span>
+            <span class="tag">Python</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">REST API</span>
+          </div>
+          <a href="https://titan.ect.ufrn.br/" class="card__link" target="_blank" rel="noopener">
+            Visit Project →
+          </a>
+        </div>
+
+        <!-- Extrasolar -->
+        <div class="card reveal reveal-delay-2">
+          <div class="card__icon">🌌</div>
+          <h3 class="card__title" data-i18n="proj2.title">Extrasolar — Exoplanet Detector</h3>
+          <p class="card__description" data-i18n="proj2.desc">
+            Automated exoplanet candidate detection tool. Processes astronomical data to identify potential exoplanets in compact binary star systems.
+          </p>
+          <div class="card__tags">
+            <span class="tag">Python</span>
+            <span class="tag">Data Science</span>
+            <span class="tag">Astronomy</span>
+            <span class="tag">Django</span>
+          </div>
+          <a href="https://titan.ect.ufrn.br/extrassolar/" class="card__link" target="_blank" rel="noopener">
+            Visit Project →
+          </a>
+        </div>
+
+        <!-- Rocket Calculator -->
+        <div class="card reveal reveal-delay-3">
+          <div class="card__icon">🚀</div>
+          <h3 class="card__title" data-i18n="proj3.title">Multi-Stage Rocket Calculator</h3>
+          <p class="card__description" data-i18n="proj3.desc">
+            Python application with Tkinter GUI for calculating the velocity of multi-stage rockets. Used as part of the OBA/MOBFOG scientific research.
+          </p>
+          <div class="card__tags">
+            <span class="tag">Python</span>
+            <span class="tag">Tkinter</span>
+            <span class="tag">Physics</span>
+            <span class="tag">Aerospace</span>
+          </div>
+          <a href="https://github.com/eder-xavier/" class="card__link" target="_blank" rel="noopener">
+            View on GitHub →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section__header reveal">
+        <h2 class="section__title" data-i18n="contact.title">Get in Touch</h2>
+        <p class="section__subtitle" data-i18n="contact.subtitle">Have a project in mind? Let's talk!</p>
+      </div>
+
+      <div class="contact__links reveal" style="max-width: 600px; margin: 0 auto;">
+          <a href="mailto:ederviniciussxf@gmail.com" class="contact-link">
+            <div class="contact-link__icon">✉</div>
+            <div>
+              <div class="contact-link__label" data-i18n="contact.label.email">Email</div>
+              <div class="contact-link__value">ederviniciussxf@gmail.com</div>
+            </div>
+          </a>
+
+          <div class="contact-link" style="cursor: default;">
+            <div class="contact-link__icon">📍</div>
+            <div>
+              <div class="contact-link__label" data-i18n="contact.label.location">Location</div>
+              <div class="contact-link__value" data-i18n="contact.location.value">Natal/RN — Brazil</div>
+            </div>
+          </div>
+
+          <a href="https://github.com/eder-xavier/" class="contact-link" target="_blank" rel="noopener">
+            <div class="contact-link__icon">💻</div>
+            <div>
+              <div class="contact-link__label" data-i18n="contact.label.github">GitHub</div>
+              <div class="contact-link__value">eder-xavier</div>
+            </div>
+          </a>
+
+          <a href="https://www.linkedin.com/in/%C3%A9der-xavier-683129297" class="contact-link" target="_blank" rel="noopener">
+            <div class="contact-link__icon">🔗</div>
+            <div>
+              <div class="contact-link__label" data-i18n="contact.label.linkedin">LinkedIn</div>
+              <div class="contact-link__value">Éder Xavier</div>
+            </div>
+          </a>
+        </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <p data-i18n="footer.text">© 2026 Éder Xavier. Crafted with passion and code.</p>
+    </div>
+  </footer>
+
+  <!-- ========== BACK TO TOP ========== -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="js/particles.js"></script>
+  <script src="js/typewriter.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
