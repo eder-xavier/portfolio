@@ -44,6 +44,7 @@
         <a href="#experience" class="nav__link" data-i18n="nav.experience">Experience</a>
         <a href="#education" class="nav__link" data-i18n="nav.education">Education</a>
         <a href="#awards" class="nav__link" data-i18n="nav.awards">Awards</a>
+        <a href="#publications" class="nav__link" data-i18n="nav.publications">Publications</a>
         <a href="#projects" class="nav__link" data-i18n="nav.projects">Projects</a>
         <a href="#contact" class="nav__link" data-i18n="nav.contact">Contact</a>
 
@@ -124,11 +125,11 @@
         <div class="about__info reveal reveal-delay-2">
           <div class="about__stats">
             <div class="stat">
-              <div class="stat__number" data-count="4" data-suffix="+">0</div>
+              <div class="stat__number" data-count="5" data-suffix="+">0</div>
               <div class="stat__label" data-i18n="stat.years">Years of Experience</div>
             </div>
             <div class="stat">
-              <div class="stat__number" data-count="10" data-suffix="+">0</div>
+              <div class="stat__number" data-count="40" data-suffix="+">0</div>
               <div class="stat__label" data-i18n="stat.projects">Projects Completed</div>
             </div>
             <div class="stat">
@@ -338,31 +339,88 @@
 
       <div class="awards__grid">
         <div class="award-card reveal reveal-delay-1">
+          <div class="award-card__icon">🎖️</div>
+          <h3 class="award-card__title" data-i18n="award_bestpaper.title">Best Paper Award</h3>
+          <span class="award-card__year">2026</span>
+          <p class="award-card__org" data-i18n="award_bestpaper.org">MODELSWARD</p>
+        </div>
+
+        <div class="award-card reveal reveal-delay-2">
           <div class="award-card__icon">🏆</div>
           <h3 class="award-card__title" data-i18n="award1.title">2nd Place — Scientific Highlight</h3>
           <span class="award-card__year">2022</span>
           <p class="award-card__org" data-i18n="award1.org">UFRN IC & Technology</p>
         </div>
 
-        <div class="award-card reveal reveal-delay-2">
+        <div class="award-card reveal reveal-delay-3">
           <div class="award-card__icon">🥇</div>
           <h3 class="award-card__title" data-i18n="award2.title">Gold Medal</h3>
           <span class="award-card__year">2022</span>
           <p class="award-card__org" data-i18n="award2.org">MOBFOG — Brazilian Rocket Olympiad</p>
         </div>
 
-        <div class="award-card reveal reveal-delay-3">
+        <div class="award-card reveal reveal-delay-4">
           <div class="award-card__icon">🏅</div>
           <h3 class="award-card__title" data-i18n="award3.title">Honor Award</h3>
           <span class="award-card__year">2021</span>
           <p class="award-card__org" data-i18n="award3.org">ONC — National Science Olympiad</p>
         </div>
 
-        <div class="award-card reveal reveal-delay-4">
+        <div class="award-card reveal reveal-delay-5">
           <div class="award-card__icon">📜</div>
           <h3 class="award-card__title" data-i18n="award4.title">Honorable Mention</h3>
           <span class="award-card__year">2021</span>
           <p class="award-card__org" data-i18n="award4.org">ONHB — National History Olympiad</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ========== PUBLICATIONS SECTION ========== -->
+  <section class="section" id="publications">
+    <div class="container">
+      <div class="section__header reveal">
+        <h2 class="section__title" data-i18n="publications.title">Publications</h2>
+        <p class="section__subtitle" data-i18n="publications.subtitle">Published and awarded academic articles</p>
+      </div>
+
+      <div class="projects__grid">
+        <!-- Paper 1 -->
+        <div class="card reveal reveal-delay-1">
+          <div class="card__icon">📄</div>
+          <h3 class="card__title" data-i18n="pub1.title" style="font-size: 1.1rem; line-height: 1.4;">Search and characterization of third-body candidates around short-period binaries using Kepler and TESS data</h3>
+          <p class="card__description" data-i18n="pub1.desc" style="margin-top: var(--space-sm);">
+            Astrophysics research paper focused on detecting exoplanet candidates orbiting binary star systems.
+          </p>
+          <div class="card__tags">
+            <span class="tag">Astrophysics</span>
+            <span class="tag">Exoplanets</span>
+            <span class="tag">Data Analysis</span>
+            <span class="tag" style="background: rgba(224, 168, 96, 0.2); color: var(--color-accent-amber);"><i data-i18n="pub.cited">Cited by</i> 5</span>
+          </div>
+          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=uXyWhuAAAAAJ&citation_for_view=uXyWhuAAAAAJ:u-x6o8ySG0sC" class="card__link" target="_blank" rel="noopener">
+            View Publication →
+          </a>
+        </div>
+
+        <!-- Paper 2 -->
+        <div class="card reveal reveal-delay-2">
+          <div class="card__icon">📄</div>
+          <h3 class="card__title" data-i18n="pub2.title" style="font-size: 1.1rem; line-height: 1.4;">Environment and Scenario Viewpoints to Execute SysML-based Architectural Models</h3>
+          <p class="card__description" data-i18n="pub2.desc" style="margin-top: var(--space-sm);">
+            Software architecture research paper exploring executable architectural models using SysML.
+          </p>
+          <div class="card__tags">
+            <span class="tag">Software Architecture</span>
+            <span class="tag">SysML</span>
+            <span class="tag">Executable Models</span>
+            <span class="tag" style="background: rgba(240, 192, 64, 0.2); color: var(--color-accent-gold); border: 1px solid rgba(240, 192, 64, 0.4);">🏆 <span data-i18n="pub.bestpaper">Best Paper Award</span></span>
+          </div>
+          <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=uXyWhuAAAAAJ&citation_for_view=uXyWhuAAAAAJ:d1gkVwhDpl0C" class="card__link" target="_blank" rel="noopener">
+            View Publication →
+          </a>
         </div>
       </div>
     </div>
@@ -432,6 +490,60 @@
             View on GitHub →
           </a>
         </div>
+
+        <!-- LucidD -->
+        <div class="card reveal reveal-delay-1">
+          <div class="card__icon">🧠</div>
+          <h3 class="card__title" data-i18n="proj4.title">LucidD — Sleep Health & Dream Platform</h3>
+          <p class="card__description" data-i18n="proj4.desc">
+            Django platform for collecting data on sleep, dreams, and lucid dreaming experiences. Features Google OAuth authentication, multi-step questionnaires, and a dream journal with audio upload.
+          </p>
+          <div class="card__tags">
+            <span class="tag">Django</span>
+            <span class="tag">Python</span>
+            <span class="tag">Neuroscience</span>
+            <span class="tag">OAuth</span>
+          </div>
+          <a href="https://neuro.ufrn.br/sonhoslucidos" class="card__link" target="_blank" rel="noopener">
+            Visit Platform →
+          </a>
+        </div>
+
+        <!-- Evxf Sounds -->
+        <div class="card reveal reveal-delay-2">
+          <div class="card__icon">🎵</div>
+          <h3 class="card__title" data-i18n="proj5.title">Evxf Sounds — Music Player</h3>
+          <p class="card__description" data-i18n="proj5.desc">
+            React Native mobile application for local music playback. Features a mini-player with swipe gestures, custom playlists creation, real-time search, interactive seekbar, and dynamic themes.
+          </p>
+          <div class="card__tags">
+            <span class="tag">React Native</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Expo</span>
+            <span class="tag">UI/UX</span>
+          </div>
+          <a href="https://github.com/eder-xavier/Evxfsounds/" class="card__link" target="_blank" rel="noopener">
+            View on GitHub →
+          </a>
+        </div>
+
+        <!-- Indie -->
+        <div class="card reveal reveal-delay-3">
+          <div class="card__icon">📝</div>
+          <h3 class="card__title" data-i18n="proj6.title">Indie — Scientific Collaboration</h3>
+          <p class="card__description" data-i18n="proj6.desc">
+            Registered Web software for scientific collaboration. Integrates a collaborative text editor, document repository, routine management system, and article search engine using a scalable microservices architecture.
+          </p>
+          <div class="card__tags">
+            <span class="tag">Python</span>
+            <span class="tag">Django</span>
+            <span class="tag">Microservices</span>
+            <span class="tag">Patent</span>
+          </div>
+          <a href="https://indie.net.br/" class="card__link" target="_blank" rel="noopener">
+            Visit Project →
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -462,6 +574,14 @@
               <div class="contact-link__value" data-i18n="contact.location.value">Natal/RN — Brazil</div>
             </div>
           </div>
+
+          <a href="http://lattes.cnpq.br/1606641179245455" class="contact-link" target="_blank" rel="noopener">
+            <div class="contact-link__icon">🎓</div>
+            <div>
+              <div class="contact-link__label" data-i18n="contact.label.lattes">Currículo Lattes</div>
+              <div class="contact-link__value">CNPq</div>
+            </div>
+          </a>
 
           <a href="https://github.com/eder-xavier/" class="contact-link" target="_blank" rel="noopener">
             <div class="contact-link__icon">💻</div>

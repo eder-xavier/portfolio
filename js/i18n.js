@@ -13,6 +13,7 @@ const I18n = (() => {
       'nav.experience': 'Experience',
       'nav.education': 'Education',
       'nav.awards': 'Awards',
+      'nav.publications': 'Publications',
       'nav.projects': 'Projects',
       'nav.contact': 'Contact',
 
@@ -68,6 +69,8 @@ const I18n = (() => {
       // Awards
       'awards.title': 'Awards & Honors',
       'awards.subtitle': 'Recognitions and achievements',
+      'award_bestpaper.title': 'Best Paper Award',
+      'award_bestpaper.org': 'MODELSWARD',
       'award1.title': '2nd Place — Scientific Highlight',
       'award1.org': 'UFRN IC & Technology',
       'award2.title': 'Gold Medal',
@@ -76,6 +79,15 @@ const I18n = (() => {
       'award3.org': 'ONC — National Science Olympiad',
       'award4.title': 'Honorable Mention',
       'award4.org': 'ONHB — National History Olympiad',
+
+      'publications.title': 'Publications',
+      'publications.subtitle': 'Published and awarded academic articles',
+      'pub.cited': 'Cited by',
+      'pub.bestpaper': 'Best Paper Award',
+      'pub1.title': 'Search and characterization of third-body candidates around short-period binaries using Kepler and TESS data',
+      'pub1.desc': 'Astrophysics research paper focused on detecting exoplanet candidates orbiting binary star systems.',
+      'pub2.title': 'Environment and Scenario Viewpoints to Execute SysML-based Architectural Models',
+      'pub2.desc': 'Software architecture research paper exploring executable architectural models using SysML.',
 
       // Projects
       'projects.title': 'Featured Projects',
@@ -86,12 +98,19 @@ const I18n = (() => {
       'proj2.desc': 'Automated exoplanet candidate detection tool. Processes astronomical data to identify potential exoplanets in compact binary star systems.',
       'proj3.title': 'Multi-Stage Rocket Calculator',
       'proj3.desc': 'Python application with Tkinter GUI for calculating the velocity of multi-stage rockets. Used as part of the OBA/MOBFOG scientific research.',
+      'proj4.title': 'LucidD — Sleep Health & Dream Platform',
+      'proj4.desc': 'Django platform for collecting data on sleep, dreams, and lucid dreaming experiences. Features Google OAuth authentication, multi-step questionnaires, and a dream journal with audio upload.',
+      'proj5.title': 'Evxf Sounds — Music Player',
+      'proj5.desc': 'React Native mobile application for local music playback. Features a mini-player with swipe gestures, custom playlists creation, real-time search, interactive seekbar, and dynamic themes.',
+      'proj6.title': 'Indie — Scientific Collaboration',
+      'proj6.desc': 'Registered Web software for scientific collaboration. Integrates a collaborative text editor, document repository, routine management system, and article search engine using a scalable microservices architecture.',
 
       // Contact
       'contact.title': 'Get in Touch',
       'contact.subtitle': "Have a project in mind? Let's talk!",
       'contact.label.email': 'Email',
       'contact.label.location': 'Location',
+      'contact.label.lattes': 'Lattes CV',
       'contact.label.github': 'GitHub',
       'contact.label.linkedin': 'LinkedIn',
       'contact.location.value': 'Natal/RN — Brazil',
@@ -107,6 +126,7 @@ const I18n = (() => {
       'nav.experience': 'Experiência',
       'nav.education': 'Formação',
       'nav.awards': 'Prêmios',
+      'nav.publications': 'Publicações',
       'nav.projects': 'Projetos',
       'nav.contact': 'Contato',
 
@@ -162,6 +182,8 @@ const I18n = (() => {
       // Awards
       'awards.title': 'Prêmios & Honrarias',
       'awards.subtitle': 'Reconhecimentos e conquistas',
+      'award_bestpaper.title': 'Melhor Artigo (Best Paper Award)',
+      'award_bestpaper.org': 'MODELSWARD',
       'award1.title': '2° Lugar — Trabalho Destaque',
       'award1.org': 'UFRN IC & Tecnologia',
       'award2.title': 'Medalha de Ouro',
@@ -170,6 +192,15 @@ const I18n = (() => {
       'award3.org': 'ONC — Olimpíada Nacional de Ciências',
       'award4.title': 'Menção Honrosa',
       'award4.org': 'ONHB — Olimpíada Nacional de História do Brasil',
+
+      'publications.title': 'Publicações',
+      'publications.subtitle': 'Artigos acadêmicos publicados e premiados',
+      'pub.cited': 'Citado por',
+      'pub.bestpaper': 'Prêmio de Melhor Artigo',
+      'pub1.title': 'Search and characterization of third-body candidates around short-period binaries using Kepler and TESS data',
+      'pub1.desc': 'Artigo de pesquisa em astrofísica focado na detecção de candidatos a exoplanetas orbitando sistemas estelares binários.',
+      'pub2.title': 'Environment and Scenario Viewpoints to Execute SysML-based Architectural Models',
+      'pub2.desc': 'Artigo de pesquisa em arquitetura de software explorando modelos arquiteturais executáveis usando SysML.',
 
       // Projects
       'projects.title': 'Projetos em Destaque',
@@ -180,12 +211,19 @@ const I18n = (() => {
       'proj2.desc': 'Ferramenta de detecção automática de candidatos a exoplanetas. Processa dados astronômicos para identificar potenciais exoplanetas em sistemas binários compactos.',
       'proj3.title': 'Calculadora de Foguetes Multi-Estágio',
       'proj3.desc': 'Aplicação Python com interface Tkinter para cálculo da velocidade de foguetes de múltiplos estágios. Usada como parte da pesquisa científica OBA/MOBFOG.',
+      'proj4.title': 'LucidD — Saúde do Sono e Sonhos',
+      'proj4.desc': 'Plataforma Django para coleta de dados sobre sono, sonhos e sonhos lúcidos. Inclui autenticação via Google, questionários multi-etapas e um diário de sonhos com upload de áudio.',
+      'proj5.title': 'Evxf Sounds — Player de Música',
+      'proj5.desc': 'Aplicativo mobile em React Native para reprodução de música local. Inclui mini-player com gestos, criação de playlists conectadas, busca em tempo real, seekbar interativa e temas dinâmicos.',
+      'proj6.title': 'Indie — Colaboração Científica',
+      'proj6.desc': 'Software Web registrado (Patente BR512024001656-2) para colaboração científica. Integra editor de textos, repositório de documentos, gerenciamento de rotina e busca de artigos usando arquitetura de microsserviços.',
 
       // Contact
       'contact.title': 'Entre em Contato',
       'contact.subtitle': 'Tem um projeto em mente? Vamos conversar!',
       'contact.label.email': 'Email',
       'contact.label.location': 'Localização',
+      'contact.label.lattes': 'Currículo Lattes',
       'contact.label.github': 'GitHub',
       'contact.label.linkedin': 'LinkedIn',
       'contact.location.value': 'Natal/RN — Brasil',
