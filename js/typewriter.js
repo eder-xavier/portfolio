@@ -65,6 +65,7 @@ const Typewriter = (() => {
   function updateTitles(lang) {
     if (lang === 'pt') {
       titles = [
+        'Arquiteto de Software',
         'Engenheiro de Software',
         'Pesquisador em Astrofísica',
         'Mestrando em Computação',
@@ -72,6 +73,7 @@ const Typewriter = (() => {
       ];
     } else {
       titles = [
+        'Software Architect',
         'Software Engineer',
         'Astrophysics Researcher',
         'MSc Student in Computing',
