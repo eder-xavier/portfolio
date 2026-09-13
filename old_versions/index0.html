@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éder Xavier - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-left" style="background-image: url('space_background.png');">
+            <img src="eder-profile.jpg" alt="Éder Xavier" class="profile-img">
+            <div class="hero-text">
+                <h1><span style="color: #FFFFFF;">Éder</span><span style="color: #E0E0E0;"> Xavier</span></h1>
+                <p><span style="color: #D3D3D3;">Software</span> <span style="color: #FFFFFF;">Developer</span> & <span style="color: #E0E0E0;">Scientist</span></p>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="hero-sphere"></div>
+            <button class="contact-btn">Contact Now</button>
+        </div>
+    </header>
+    <div class="container">
+        <div class="section">
+            <h2><span style="color: #FFFFFF;">Contact</span></h2>
+            <div class="item">Phone: +55 84 991851714</div>
+            <div class="item">Email: ederviniciussxf@gmail.com</div>
+            <div class="item">Location: Natal/RN - Brazil</div>
+            <div class="item">LinkedIn: www.linkedin.com/in/éder-xavier-683129297</div>
+            <div class="item">GitHub: https://github.com/eder-xavier/</div>
+        </div>
+        <div class="section">
+            <h2><span style="color: #FFFFFF;">Skills</span></h2>
+            <div class="item">Languages: Python, JavaScript, Java, PHP, TypeScript, Dart, C#, C++, Fortran, Matlab</div>
+            <div class="item">Frameworks: Django, Flutter, Spring Boot, NodeJS, React, Angular</div>
+            <div class="item">Other: APIs REST, SysADL, Machine Learning, Docker, AWS, IoT</div>
+        </div>
+        <div class="section">
+            <h2><span style="color: #FFFFFF;">Experience</span></h2>
+            <div class="item">ICjr OBA/MOBFOG 2022-2023: Software for rocket velocity with Python and Tkinter</div>
+            <div class="item">Astrofísica Estelar 2022-2024: Exoplanet platform with Django and APIs</div>
+            <div class="item">Indie Platform 2023-2024: Collaboration tool with Django, JS, HTML, CSS</div>
+        </div>
+        <div class="section">
+            <h2><span style="color: #FFFFFF;">Education</span></h2>
+            <div class="item">BSc Science and Technology - UFRN (2022-Present)</div>
+            <div class="item">BSc Systems Analysis - UniBf (2024-Present)</div>
+        </div>
+        <div class="section">
+            <h2><span style="color: #FFFFFF;">Awards</span></h2>
+            <div class="item">2nd Place - UFRN Highlight Work 2022</div>
+            <div class="item">Gold Medal - MOBFOG 2022</div>
+            <div class="item">Merit Honor - ONC 2021</div>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('scroll', () => {
+            document.querySelectorAll('.section').forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top >= 0 && rect.top < window.innerHeight) {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

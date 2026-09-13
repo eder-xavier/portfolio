@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astra - Full-service Creative Agency</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 3px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.5);
+        }
+        
+        /* Header styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 0.1rem;
+            cursor: pointer;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+        
+        .nav-links a:hover {
+            color: #e0e0e0;
+        }
+        
+        .contact-button {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .contact-button:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Hero section */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .hero-left {
+            width: 50%;
+            background: #f0f0f0;
+            position: relative;
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 1;
+        }
+        
+        .hero-right {
+            width: 50%;
+            background-image: url('https://framerusercontent.com/images/EG6XYZ2MmMQY8S3tmuTtdRWuZM.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .divider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent 50%, rgba(0, 0, 0, 0.5) 50%);
+            z-index: 0;
+        }
+        
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: twinkle 3s infinite alternate;
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0.2; }
+            100% { opacity: 1; }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-title {
+            font-size: 6rem;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero-title span {
+            font-size: 1.5rem;
+            margin-left: 0.5rem;
+            background: #000;
+            padding: 0.25rem 0.5rem;
+            border-radius: 50%;
+            font-weight: 400;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+        
+        .services-list {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .services-list li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        
+        .services-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0.5rem;
+            height: 0.5rem;
+            background: #000;
+            border-radius: 50%;
+        }
+        
+        .cta-button {
+            background: #000;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid #000;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            background: transparent;
+            color: #000;
+        }
+        
+        /* Stats section */
+        .stats {
+            padding: 5rem 5%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        
+        .stat-item {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        
+        /* Services section */
+        .services {
+            padding: 5rem 5%;
+            background: #f0f0f0;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: #f0f0f0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .service-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+        
+        .projects-count {
+            font-weight: 700;
+            color: #333;
+        }
+        
+        /* Pricing section */
+        .pricing {
+            padding: 5rem 5%;
+        }
+        
+        .pricing-cards {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .pricing-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .pricing-header {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        
+        .features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .features li {
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #000;
+        }
+        
+        .delivery-time {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Testimonials section */
+        .testimonials {
+            padding: 5rem 5%;
+            background: #f0f0f0;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+        
+        .author-info h4 {
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+        
+        .author-info p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        /* Team section */
+        .team {
+            padding: 5rem 5%;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .team-member {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .member-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            object-fit: cover;
+        }
+        
+        .member-name {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .member-role {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .member-bio {
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        /* Footer */
+        footer {
+            background: #000;
+            padding: 3rem 5%;
+            color: #ccc;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .hero {
+                flex-direction: column;
+            }
+            
+            .hero-left, .hero-right {
+                width: 100%;
+                height: 50vh;
+            }
+            
+            .hero-title {
+                font-size: 4rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .divider {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .contact-button {
+                display: none;
+            }
+            
+            .services-list li {
+                padding-left: 1rem;
+            }
+            
+            .services-list li::before {
+                width: 0.3rem;
+                height: 0.3rem;
+            }
+            
+            .pricing-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .pricing-card {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Animation for stars */
+        .star-1 {
+            width: 2px;
+            height: 2px;
+            top: 10%;
+            left: 10%;
+            animation-delay: 1s;
+        }
+        
+        .star-2 {
+            width: 1px;
+            height: 1px;
+            top: 20%;
+            left: 30%;
+            animation-delay: 2s;
+        }
+        
+        .star-3 {
+            width: 3px;
+            height: 3px;
+            top: 30%;
+            left: 20%;
+            animation-delay: 3s;
+        }
+        
+        .star-4 {
+            width: 1.5px;
+            height: 1.5px;
+            top: 40%;
+            left: 60%;
+            animation-delay: 4s;
+        }
+        
+        .star-5 {
+            width: 2px;
+            height: 2px;
+            top: 50%;
+            left: 80%;
+            animation-delay: 5s;
+        }
+        
+        .star-6 {
+            width: 1px;
+            height: 1px;
+            top: 60%;
+            left: 70%;
+            animation-delay: 6s;
+        }
+        
+        .star-7 {
+            width: 2.5px;
+            height: 2.5px;
+            top: 70%;
+            left: 40%;
+            animation-delay: 7s;
+        }
+        
+        .star-8 {
+            width: 1.5px;
+            height: 1.5px;
+            top: 80%;
+            left: 20%;
+            animation-delay: 8s;
+        }
+        
+        .star-9 {
+            width: 2px;
+            height: 2px;
+            top: 90%;
+            left: 50%;
+            animation-delay: 9s;
+        }
+        
+        .star-10 {
+            width: 1px;
+            height: 1px;
+            top: 95%;
+            left: 10%;
+            animation-delay: 10s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Astra</div>
+        <nav class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#team">Team</a>
+        </nav>
+        <button class="contact-button">
+            <span>Contact Now</span>
+        </button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-left">
+            <div class="hero-content">
+                <h1 class="hero-title">Astra<span>R</span></h1>
+                <p class="hero-subtitle">Full-service Creative Agency</p>
+                <ul class="services-list">
+                    <li>Branding and Identity</li>
+                    <li>UI/UX and Product Design</li>
+                    <li>Social Media Marketing</li>
+                    <li>SEO Optimization</li>
+                </ul>
+                <button class="cta-button">Get Started</button>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="divider"></div>
+            <div class="stars-container">
+                <div class="star star-1"></div>
+                <div class="star star-2"></div>
+                <div class="star star-3"></div>
+                <div class="star star-4"></div>
+                <div class="star star-5"></div>
+                <div class="star star-6"></div>
+                <div class="star star-7"></div>
+                <div class="star star-8"></div>
+                <div class="star star-9"></div>
+                <div class="star star-10"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stat-item">
+            <div class="stat-number">75</div>
+            <div class="stat-label">Launched Projects</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">98%</div>
+            <div class="stat-label">Client Satisfaction</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">2008</div>
+            <div class="stat-label">Year of Establishment</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">32</div>
+            <div class="stat-label">Team of Pilots</div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">B</div>
+                <h3 class="service-title">Branding and Identity</h3>
+                <p class="service-description">We define your voice, visuals, and vision to help your brand connect and thrive.</p>
+                <div class="projects-count">+11 Projects</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">U</div>
+                <h3 class="service-title">UI/UX and Product Design</h3>
+                <p class="service-description">Human-centered design that turns complex ideas into elegant user experiences.</p>
+                <div class="projects-count">12 Projects</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">S</div>
+                <h3 class="service-title">Social Media Marketing</h3>
+                <p class="service-description">We turn followers into fans with standout content and strategy.</p>
+                <div class="projects-count">25 Projects</div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">S</div>
+                <h3 class="service-title">SEO Optimization</h3>
+                <p class="service-description">Tailored SEO solutions that improve rankings, and increase clicks.</p>
+                <div class="projects-count">17 Projects</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <h2 class="section-title">Pricing</h2>
+        <div class="pricing-cards">
+            <div class="pricing-card">
+                <h3 class="pricing-header">Per Project</h3>
+                <div class="price">$5,490</div>
+                <ul class="features">
+                    <li>Homepage + inner pages (4-5)</li>
+                    <li>Design and Development</li>
+                    <li>Mobile-Optimized Design</li>
+                    <li>Weekly support</li>
+                </ul>
+                <div class="delivery-time">Delivery time: 3-4 weeks</div>
+            </div>
+            <div class="pricing-card">
+                <h3 class="pricing-header">Monthly</h3>
+                <div class="price">$2,990</div>
+                <ul class="features">
+                    <li>Homepage + inner pages (4-5)</li>
+                    <li>Design and Development</li>
+                    <li>Mobile-Optimized Design</li>
+                    <li>Monthly support</li>
+                </ul>
+                <div class="delivery-time">Delivery time: Ongoing</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h2 class="section-title">What People Say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p class="testimonial-text">As a startup, we needed fast, smart, and beautiful. Astra delivered all three, and then some. We’ll be back for round two soon. Incredible!</p>
+                <div class="testimonial-author">
+                    <img src="https://framerusercontent.com/images/01iF57Xct56A1osdShFbk0gZrbo.png" alt="Mia Patakis" class="author-avatar">
+                    <div class="author-info">
+                        <h4>Mia Patakis</h4>
+                        <p>Design Director, Summa</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">Our social engagement doubled in less than a month after Astra took over our campaigns. Their eye for design and strategic content planning is unmatched.</p>
+                <div class="testimonial-author">
+                    <img src="https://framerusercontent.com/images/4C91LAf2tFFxMxKUWDLW52FKU.png" alt="Damian Bennett" class="author-avatar">
+                    <div class="author-info">
+                        <h4>Damian Bennett</h4>
+                        <p>Founder, LINX</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">From UI/UX to product launch, Astra brought our app to life with precision and soul. Couldn’t have asked for a better partner.</p>
+                <div class="testimonial-author">
+                    <img src="https://framerusercontent.com/images/psTaH4n9X6yZnYweo6OlRL1oag.png" alt="Theodore Blake" class="author-avatar">
+                    <div class="author-info">
+                        <h4>Theodore Blake</h4>
+                        <p>Brand Manager, Vellox</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <h2 class="section-title">Our Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <img src="https://framerusercontent.com/images/4aXmm7hoCvpjLkACHKZT7FS6v0.png" alt="Mia Lennox" class="member-photo">
+                <h3 class="member-name">Mia Lennox</h3>
+                <p class="member-role">Design Director</p>
+                <p class="member-bio">I believe great creative doesn’t just look good — it solves problems, tells stories, and leaves a lasting impression. I’m here to make sure every project does exactly that.</p>
+            </div>
+            <div class="team-member">
+                <img src="https://framerusercontent.com/images/JHuA3QQJss4VJPv0pF5vTbkshDk.png" alt="Michael Rosenberg" class="member-photo">
+                <h3 class="member-name">Michael Rosenberg</h3>
+                <p class="member-role">Founder</p>
+                <p class="member-bio">We’re a full-service agency driven by strategy, design, and technology. From brand foundations to fully developed digital products, we create work that doesn’t just look good: it performs, connects, and endures.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Astra</div>
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">Services</a>
+                <a href="#">Projects</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+            <p class="copyright">© 2023 Astra. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple scroll animation for sections
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add hover effect to the hero title
+        const heroTitle = document.querySelector('.hero-title');
+        heroTitle.addEventListener('mouseenter', () => {
+            heroTitle.style.transform = 'scale(1.05)';
+        });
+        
+        heroTitle.addEventListener('mouseleave', () => {
+            heroTitle.style.transform = 'scale(1)';
+        });
+
+        // Animate stars
+        const stars = document.querySelectorAll('.star');
+        stars.forEach(star => {
+            star.style.animationDelay = `${Math.random() * 5}s`;
+        });
+    </script>
+</body>
+</html>

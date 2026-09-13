@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Éder Xavier - Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            background: #000;
+            overflow-x: hidden;
+        }
+        .header {
+            position: relative;
+            height: 100vh;
+            background: url('https://via.placeholder.com/1500x800?text=Solar+Eclipse+Background') no-repeat center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 50px;
+        }
+        .header-left {
+            width: 40%;
+            background: linear-gradient(to right, #fff, #e0e0e0);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 20px;
+        }
+        .header-left h1 {
+            font-size: 100px;
+            color: #000;
+            margin: 0;
+            line-height: 0.9;
+            text-transform: uppercase;
+        }
+        .header-left .eclipse {
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            width: 150px;
+            height: 150px;
+            background: #000;
+            border-radius: 50%;
+            box-shadow: 0 0 0 20px #fff, 0 0 0 40px rgba(255, 255, 255, 0.5);
+        }
+        .header-left .dot {
+            position: absolute;
+            top: 55%;
+            left: 42%;
+            width: 10px;
+            height: 10px;
+            background: #000;
+            border-radius: 50%;
+        }
+        .nav {
+            position: absolute;
+            top: 20px;
+            left: 50px;
+        }
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+        .nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .contact-btn {
+            position: absolute;
+            top: 20px;
+            right: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid #fff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+        .header-right {
+            width: 60%;
+            text-align: right;
+            padding-right: 20px;
+        }
+        .header-right h2 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        .header-right p {
+            font-size: 14px;
+            color: #ccc;
+        }
+        .buy-btn {
+            background: #000;
+            border: 1px solid #fff;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .content {
+            padding: 50px;
+            color: #000;
+            background: #fff;
+        }
+        .content h2 {
+            font-size: 36px;
+        }
+        .content p {
+            font-size: 16px;
+        }
+        .skills, .experience, .projects, .contact {
+            margin-bottom: 40px;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="nav">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="contact-btn">Get in Touch</div>
+        <div class="header-left">
+            <h1>Astra</h1>
+            <div class="eclipse"></div>
+            <div class="dot"></div>
+            <ul>
+                <li>Design & Identity</li>
+                <li>UI/UX and Product Design</li>
+                <li>Social Media Marketing</li>
+                <li>W. Optimization</li>
+            </ul>
+        </div>
+        <div class="header-right">
+            <h2>Space of Creative Solutions</h2>
+            <p>Full-service Creative Agency</p>
+            <div class="buy-btn">Buy "Astra"</div>
+        </div>
+    </div>
+    <div class="content">
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <p>Éder Xavier - Software Developer with experience in aerospace engineering, stellar astrophysics, and scientific research. Proficient in software architecture and engineering with expertise in multiple languages and frameworks. Developed software for large-scale use and research purposes. Also specialized in cognitive neuroscience and advanced scientific research.</p>
+            <p>Gold medalist at the Brazilian Rocket Show (MOBFOG) and multiple awards in scientific olympiads. Seeking challenging opportunities in software engineering and high-performance software development.</p>
+            <div class="skills">
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                    <li>Java</li>
+                    <li>TypeScript</li>
+                    <li>Dart</li>
+                    <li>C#</li>
+                    <li>C++</li>
+                    <li>PHP</li>
+                    <li>Django</li>
+                    <li>Flutter</li>
+                    <li>React</li>
+                    <li>Angular</li>
+                    <li>Node.js</li>
+                    <li>Spring Boot</li>
+                    <li>HTML/CSS</li>
+                    <li>Machine Learning</li>
+                    <li>LLMs</li>
+                    <li>REST APIs</li>
+                    <li>Git</li>
+                    <li>Docker</li>
+                </ul>
+            </div>
+        </section>
+        <section id="experience" class="experience">
+            <h2>Experience & Education</h2>
+            <div>
+                <h3>2024 - Present</h3>
+                <p>Graduation in Systems Analysis and Development - Brazilian Union of Colleges (UniBf)</p>
+                <p>Developing "Indie", a platform focused on scientific production, collaboration, and publication. Built with Django, various APIs, JSON calls, and JavaScript for functionality, with frontend in HTML and CSS. The software follows agile development methodologies with a client-server and microservices architecture. Registered with INPI and participating in the startup NE program.</p>
+                <p>Building a catalog to store data from over 250 stellar binary systems using data from telescopes like TESS and Kepler. Published in the journal Monthly Notices of the Royal Astronomical Society (Qualis A1).</p>
+                <p>Scientific initiation in neuroscience, working with sleep electrophysiology analysis in the context of lucid dreams. Developing tools to automate EEG analysis and automatic sleep staging using machine learning.</p>
+                <p>Scientific initiation in software architecture in the context of digital twins. Initially working on developing a new version of the SysADL architecture language, followed by a simulation tool for the language architecture.</p>
+                <p>Developing the "Devaneios" application in partnership with researchers from the UFRN Brain Institute. The app measures mental wandering states in patients with or without psychedelics, functioning as an API to send user data to a platform where researchers can analyze normalized data in graphical form.</p>
+            </div>
+            <div>
+                <h3>2022 - Present</h3>
+                <p>Graduation in Science and Technology - Federal University of Rio Grande do Norte (UFRN)</p>
+                <p>2nd Place in the Highlight Scientific and Technological Work Category, UFRN; Gold Medal, MOBFOG (Brazilian Rocket Show); Merit Award, ONC (National Science Olympiad); Honorable Mention, ONHB (National Brazilian History Olympiad)</p>
+            </div>
+            <div>
+                <h3>2022 - 2023</h3>
+                <p>Junior Scientific Initiation Scholar (ICjr) - OBA/MOBFOG</p>
+                <p>Focused on the scientific method applied to aerospace engineering. Conducted various experimental and theoretical work on rocket construction. Notably developed software to calculate the velocity of multi-stage rockets using Python with a Tkinter interface.</p>
+            </div>
+            <div>
+                <h3>2022 - 2024</h3>
+                <p>Stellar Astrophysics Researcher - Research on exoplanets in compact binary systems</p>
+                <p>Discovered evidence of a potential exoplanet and searched for confirmation of another. Developed the astrophysics team's platform and an automated exoplanet candidate detection tool using Django, APIs, and domain-specific libraries.</p>
+            </div>
+            <div>
+                <h3>2021 - 2022</h3>
+                <p>Secondary Education - Salesiano São José College, Natal/RN</p>
+            </div>
+        </section>
+        <section id="projects" class="projects">
+            <h2>Notable Projects</h2>
+            <div>
+                <h3>"Indie" Scientific Platform</h3>
+                <p>Django, JavaScript, HTML/CSS, REST APIs</p>
+                <p>A platform for scientific production, collaboration, and publication with client-server architecture and microservices. Registered with INPI and participating in the startup NE program.</p>
+                <a href="#">View Code</a>
+            </div>
+            <div>
+                <h3>Stellar Binary Systems Catalog</h3>
+                <p>Django, PostgreSQL, REST APIs</p>
+                <p>A catalog storing data from over 250 stellar binary systems using data from TESS and Kepler telescopes. Resulted in publication in Monthly Notices of the Royal Astronomical Society (Qualis A1).</p>
+                <a href="#">View Project</a>
+            </div>
+            <div>
+                <h3>Exoplanet Detection Platform</h3>
+                <p>Django, Python, Data Analysis Libraries</p>
+                <p>Platform for astrophysics team with automated exoplanet candidate detection tools. Contributed to the discovery of evidence of a potential exoplanet.</p>
+                <a href="#">View Project</a>
+            </div>
+            <div>
+                <h3>Rocket Velocity Calculator</h3>
+                <p>Python, Tkinter</p>
+                <p>Software to calculate the velocity of multi-stage rockets, developed during my scientific initiation in aerospace engineering.</p>
+                <a href="#">View Code</a>
+            </div>
+            <div>
+                <h3>Devaneios App</h3>
+                <p>React Native, Mobile APIs</p>
+                <p>Application to measure mental wandering states in patients with or without psychedelics, developed in partnership with UFRN Brain Institute researchers.</p>
+                <a href="#">View Code</a>
+            </div>
+            <div>
+                <h3>Digital Twins Architecture</h3>
+                <p>SysADL, Software Architecture, Simulation</p>
+                <p>Working on developing a new version of the SysADL architecture language and a simulation tool for the language architecture in the context of digital twins.</p>
+                <a href="#">View Code</a>
+            </div>
+        </section>
+        <section id="contact" class="contact">
+            <h2>Get In Touch</h2>
+            <p>I'm currently looking for new opportunities and challenges in software engineering and high-performance software development. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+            <div>
+                <h3>📧 Email</h3>
+                <p>ederviniciussxf@gmail.com</p>
+            </div>
+            <div>
+                <h3>📱 Phone</h3>
+                <p>+55 84 99185-1714</p>
+            </div>
+            <div>
+                <h3>🏠 Location</h3>
+                <p>Natal, RN - Brazil</p>
+            </div>
+            <div>
+                <h3>Connect with me</h3>
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+                <a href="#">Lattes</a>
+            </div>
+        </section>
+        <footer>
+            <p>Designed & Built by Éder Xavier</p>
+        </footer>
+    </div>
+</body>
+</html>
